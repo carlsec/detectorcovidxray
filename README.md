@@ -9,7 +9,9 @@ Foi utilizado a Resnet101 com os pesos treinados e congelados, somente a camada 
 
 ![plot](./imgs/report.png)
 
-Estou trabalhando na melhoria e uma aplicação em Flask para o modelo.
+API with Flask
+
+![plot](./imgs/api.png)
 
 
 <h4 align="center">
