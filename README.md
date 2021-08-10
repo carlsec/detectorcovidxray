@@ -13,6 +13,17 @@ API with Flask
 
 ![plot](./imgs/api.png)
 
+ <h3>Como usar com o Docker<h3>
+    
+ `git clone https://github.com/carlsec/detectorcovidxray.git`
+   
+ `docker build -t python-docker .`
+    
+ `docker run python-docker`
+
+
+    
+<h6>Coloque o arquivo .pth dos pesos treinados na raiz do directorio. </h6>
 
 <h4 align="center">
     <a href="https://drive.google.com/file/d/1MBwHhK0yaosXjfEBf_YQGJAF39-aROI-/view?usp=sharing">🔗 Pesos do modelo treinado</a>
