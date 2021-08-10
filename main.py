@@ -11,17 +11,12 @@ from PIL import Image
 import albumentations as A
 from flask import Flask, jsonify, request
 
-<<<<<<< HEAD
 model = torch.load('modelCovid19.pth', map_location ='cpu')
 model.eval()
-
-=======
 
 model = torch.load('modelCovid19.pth')
 model.eval()
 
-
->>>>>>> 3247fab53a3f67926539d33a95024b10297166f7
 transform = A.Compose(
         [A.Resize(300,300),
          A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))])
@@ -31,11 +26,8 @@ def prepare_img(img):
     im = Image.open(io.BytesIO(img))
     im = np.array(im)
     im = transform(image=im)['image']
-<<<<<<< HEAD
     im = torch.tensor(im/255).to('cpu').float()
-=======
     im = torch.tensor(im/255).to('cuda').float()
->>>>>>> 3247fab53a3f67926539d33a95024b10297166f7
     im = im.unsqueeze(0).permute(0, 3, 1, 2)
     return im
 
